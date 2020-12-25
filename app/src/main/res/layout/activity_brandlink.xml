@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/c"
+        app:layout_constraintTop_toTopOf="parent">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_160"
+            android:scaleType="centerCrop"
+            android:id="@+id/brand_good_img"
+            app:layout_constraintTop_toTopOf="parent"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#fff"
+            android:textSize="@dimen/dp_20"
+            android:id="@+id/brand_good_name"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+        <TextView
+            android:layout_width="@dimen/dp_100"
+            android:layout_height="@dimen/dp_1"
+            app:layout_constraintTop_toBottomOf="@id/brand_good_name"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="@dimen/dp_5"
+            android:background="#fff"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        app:layout_constraintTop_toBottomOf="@id/c"
+        android:id="@+id/brand_good_desc"
+        android:textSize="@dimen/sp_13"
+        android:layout_margin="@dimen/dp_10"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></TextView>
+    <View
+        app:layout_constraintTop_toBottomOf="@id/brand_good_desc"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_5"
+        android:background="#E3E3E3"></View>
+    <androidx.recyclerview.widget.RecyclerView
+        app:layout_constraintTop_toBottomOf="@id/brand_good_desc"
+        android:layout_marginTop="@dimen/dp_10"
+        android:id="@+id/rlv_brand_good"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

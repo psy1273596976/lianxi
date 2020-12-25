@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingVertical="@dimen/dp_5">
+
+    <ImageView
+        android:id="@+id/brand_img"
+        android:src="@mipmap/ic_launcher"
+        android:scaleType="fitXY"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_200"/>
+    <TextView
+        android:text="11111111111111111111111111111"
+        android:id="@+id/brand_tv_title"
+        app:layout_constraintRight_toRightOf="@id/brand_img"
+        app:layout_constraintLeft_toLeftOf="@id/brand_img"
+        app:layout_constraintTop_toTopOf="@id/brand_img"
+        app:layout_constraintBottom_toBottomOf="@id/brand_img"
+        android:textSize="@dimen/dp_17"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,98 @@
+apply plugin: 'com.android.application'
+
+android {
+    useLibrary 'org.apache.http.legacy'
+
+    //自3.6.0开始需要java8的支持
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    compileSdkVersion 30
+    buildToolsVersion "30.0.2"
+
+
+    defaultConfig {
+        applicationId "com.http.myshop"
+        minSdkVersion 22
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    //recycler依赖 + tab
+    implementation 'com.android.support:design:28.0.0'
+    // RecycleView（多布局）依赖
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
+    //（适配器是 继承的Recycler.adapter）
+//刷新，加载更多依赖
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0'
+
+    //读取网络图片的依赖
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+
+    //Gson依赖
+    implementation 'com.google.code.gson:gson:2.2.4'
+
+    //轮播图（Banner）的依赖
+    implementation 'com.youth.banner:banner:1.4.10'
+    //轮播图写完以后记得调用 start(); 方法
+
+//  文章卡片（cardView）效果的依赖
+    implementation 'com.android.support:cardview-v7:28.0.0'
+
+    //xRecyclerView 依赖
+    implementation 'com.jcodecraeer:xrecyclerview:1.5.9'
+
+    // 动态权限依赖 如：打电话 发短信
+    implementation 'com.github.dfqin:grantor:2.5'
+
+//greendao
+    implementation 'org.greenrobot:greendao:3.3.0' // add library
+
+//GreenDao依赖
+    implementation 'com.squareup.retrofit2:converter-gson:2.0.2'
+
+    implementation 'com.squareup.retrofit2:retrofit:2.5.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.9.0'
+    implementation 'com.squareup.okhttp3:okhttp:3.6.0'
+    implementation 'com.jakewharton:butterknife:10.0.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.0.0'
+    implementation 'com.prolificinteractive:material-calendarview:1.4.3'
+    implementation 'com.github.kinkoi:materialsearchview:1.4.0'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.7'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+
+//EventBus依赖
+    implementation 'org.greenrobot:eventbus:3.1.1'
+
+//ButterKnife依赖
+    implementation 'com.jakewharton:butterknife:10.1.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.1.0'
+
+    //本地相机相册选择图片
+    implementation 'com.github.LuckSiege.PictureSelector:picture_library:v2.5.3'
+    implementation 'androidx.navigation:navigation-fragment:2.3.2'
+    implementation 'androidx.navigation:navigation-ui:2.3.2'
+
+    //垂直的tablayout
+    implementation 'q.rorbin:VerticalTabLayout:1.2.5'
+}

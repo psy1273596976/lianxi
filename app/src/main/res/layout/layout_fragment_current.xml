@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/head"
+            app:layout_constraintTop_toTopOf="parent">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_150"
+                app:layout_constraintTop_toTopOf="parent"
+                android:id="@+id/head_img"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="回家,放松身心"
+                android:textSize="@dimen/sp_20"
+                android:textColor="@color/white"
+                app:layout_constraintLeft_toLeftOf="@id/head_img"
+                app:layout_constraintTop_toTopOf="@id/head_img"
+                app:layout_constraintRight_toRightOf="@id/head_img"
+                app:layout_constraintBottom_toBottomOf="@id/head_img"
+                android:id="@+id/head_text"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/head"
+            android:text="-- 居家分类--"
+            android:id="@+id/classify"
+            android:textSize="@dimen/sp_13"
+            android:layout_marginTop="@dimen/dp_10"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rlv_classify"
+            app:layout_constraintTop_toBottomOf="@id/classify"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
