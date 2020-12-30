@@ -8,6 +8,9 @@ import com.http.myshop.interfaces.IBasePresenter;
 public class SplaceActivity extends BaseActivity {
     @Override
     protected int getLayout() {
+
+
+
         return R.layout.activity_splace;
     }
 
