@@ -5,6 +5,8 @@ public class CeShi8 {
     private int age;
 
     public CeShi8(String name, int age) {
+
+        
         this.name = name;
         this.age = age;
     }
